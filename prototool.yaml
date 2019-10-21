@@ -1,0 +1,11 @@
+protoc:
+  version: 3.8.0
+lint:
+  group: uber2
+generate:
+  go_options:
+    import_path: github.com/johnchildren/grpc-gateway-borked-example
+  plugins:
+    - name: swagger
+      type: go
+      output: .gen/proto/go

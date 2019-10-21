@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+message FooBar {
+  string value = 1;
+}
+
+message Foo {
+  message Bar {
+    string value = 1;
+  }
+  Bar bar = 1;
+}
+
+service FooBarService {
+  rpc BarYourFoos(FooBar) returns (Foo);
+}
